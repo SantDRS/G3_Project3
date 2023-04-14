@@ -1,0 +1,393 @@
+region id,region
+a0001,Empordà
+a0002,Amarone della Valpolicella
+a0003,Alentejo
+a0004,Oakville
+a0005,Napa Valley
+a0006,California
+a0007,Rutherford
+a0008,Veneto
+a0009,Côte-Rôtie
+a0010,
+a0011,Chambertin Grand Cru
+a0012,Agrelo
+a0013,Ribera del Duero
+a0014,Moon Mountain District
+a0015,Barolo
+a0016,Stellenbosch
+a0017,Diamond Mountain District
+a0018,Western Cape
+a0019,Szekszárd
+a0020,Howell Mountain
+a0021,Musigny Grand Cru
+a0022,Toro
+a0023,Sta. Rita Hills
+a0024,St. Helena
+a0025,Russian River Valley
+a0026,Romanée-Saint-Vivant Grand Cru
+a0027,Heathcote
+a0028,Haut-Médoc
+a0029,Amarone della Valpolicella Classico
+a0030,Échezeaux Grand Cru
+a0031,McLaren Vale
+a0032,Vosne-Romanée Premier Cru
+a0033,Yamhill County
+a0034,Fleurieu
+a0035,Pomerol
+a0036,Sonoma Mountain
+a0037,Madeira
+a0038,Barossa Valley
+a0039,Douro
+a0040,Pauillac
+a0041,Mendoza
+a0042,Margaux
+a0043,Toscana
+a0044,Perdriel
+a0045,Saint-Émilion Grand Cru
+a0046,Bolgheri Sassicaia
+a0047,La Tâche Grand Cru
+a0048,Tunuyán
+a0049,South Australia
+a0050,Colchagua Valley
+a0051,Mount Veeder
+a0052,Uco Valley
+a0053,Stags Leap District
+a0054,Niederösterreich
+a0055,Grands-Échezeaux Grand Cru
+a0056,Richebourg Grand Cru
+a0057,Romanée-Conti Grand Cru
+a0058,Langhe
+a0059,Champagne
+a0060,Povardarie
+a0061,Eden Valley
+a0062,Châteauneuf-du-Pape
+a0063,Saint-Émilion
+a0064,Santa Barbara County
+a0065,Rioja
+a0066,Sonoma Valley
+a0067,Brunello di Montalcino
+a0068,Central Coast
+a0069,Santa Lucia Highlands
+a0070,Knights Valley
+a0071,Chambertin-Clos de Bèze Grand Cru
+a0072,Priorat
+a0073,Maremma Toscana
+a0074,Jumilla
+a0075,Côte de Nuits
+a0076,Dry Creek Valley
+a0077,Paso Robles
+a0078,Bonnes-Mares Grand Cru
+a0079,Clos de la Roche Grand Cru
+a0080,Edna Valley
+a0081,Sonoma Coast
+a0082,Spring Mountain District
+a0083,Hermitage
+a0084,Walla Walla Valley
+a0085,Pessac-Léognan
+a0086,La Clape
+a0087,Saint-Julien
+a0088,Maipo Valley
+a0089,Hérault
+a0090,Vosne-Romanée
+a0091,Salento
+a0092,Primitivo di Manduria
+a0093,Corton Grand Cru
+a0094,La Romanée Grand Cru
+a0095,Okanagan Valley
+a0096,Calistoga
+a0097,Coombsville
+a0098,Oak Knoll District
+a0099,Barbaresco
+a0100,Cádiz
+a0101,Borba
+a0102,Sardegna
+a0103,Chambolle-Musigny 1er Cru 'Les Amoureuses'
+a0104,Anderson Valley
+a0105,Puente Alto
+a0106,Bolgheri Superiore
+a0107,Saint-Estèphe
+a0108,Alentejano
+a0109,Montrachet Grand Cru
+a0110,Meursault
+a0111,Corton-Charlemagne Grand Cru
+a0112,Bordeaux Supérieur
+a0113,Bâtard-Montrachet Grand Cru
+a0114,Alsace
+a0115,Rheinhessen
+a0116,Wachau
+a0117,Chevalier-Montrachet Grand Cru
+a0118,Chablis 1er Cru 'Butteaux'
+a0119,Meursault Premier Cru
+a0120,Valdeorras
+a0121,Pouilly-Fumé
+a0122,Puligny-Montrachet Premier Cru
+a0123,Pouilly-Fuissé
+a0124,Wehlen
+a0125,Wiltingen
+a0126,Sonoma County
+a0127,Pfalz
+a0128,Kamptal
+a0129,Puligny-Montrachet
+a0130,Chablis Grand Cru 'Blanchot'
+a0131,Bordeaux
+a0132,Chassagne-Montrachet 1er Cru 'Cailleret'
+a0133,Los Carneros
+a0134,Chablis Grand Cru 'Les Clos'
+a0135,Chablis Grand Cru 'Valmur'
+a0136,Franschhoek
+a0137,Rías Baixas
+a0138,Wagram
+a0139,Meursault 1er Cru 'Charmes'
+a0140,Rivesaltes
+a0141,Bienvenues-Bâtard-Montrachet Grand Cru
+a0142,Condrieu
+a0143,Criots-Bâtard-Montrachet Grand Cru
+a0144,Chassagne-Montrachet 1er Cru 'Les Vergers'
+a0145,Chablis Grand Cru 'Preuses'
+a0146,Evora
+a0147,Recas
+a0148,Swartland
+a0149,Marche
+a0150,Dundee Hills
+a0151,Overberg
+a0152,Südtirol - Alto Adige
+a0153,Saumur
+a0154,Beechworth
+a0155,Margaret River
+a0156,Mosel
+a0157,Beaune 1er Cru 'Le Clos des Mouches'
+a0158,Lugana
+a0159,Meursault 1er Cru 'Les Bouchères'
+a0160,Meursault 1er Cru 'Perrières'
+a0161,Venezia
+a0162,Chassagne-Montrachet 1er Cru 'Morgeot'
+a0163,Graubünden
+a0164,Cognac
+a0165,Piemonte
+a0166,Chassagne-Montrachet 1er Cru 'Les Grandes Ruchottes'
+a0167,Alsace Grand Cru
+a0168,Trentino-Alto Adige
+a0169,Sancerre
+a0170,Bonnezeaux
+a0171,Waiheke Island
+a0172,Chassagne-Montrachet Premier Cru
+a0173,Ribeiro
+a0174,Meursault 1er Cru 'Genevrières'
+a0175,Santa Cruz Mountains
+a0176,Rogue Valley
+a0177,Mittelrhein
+a0178,Château-Grillet
+a0179,Málaga
+a0180,Ticino
+a0181,Puligny-Montrachet 1er Cru 'La Truffière'
+a0182,Meursault 1er Cru 'La pièce sous le Bois'
+a0183,Isola dei Nuraghi
+a0184,Vougeot 1er Cru 'Le Clos Blanc'
+a0185,Nahe
+a0186,Colli Orientali del Friuli
+a0187,Andalucía
+a0188,Vouvray
+a0189,Baden
+a0190,Chamoson
+a0191,delle Venezie
+a0192,Côtes-du-Rhône
+a0193,Elgin
+a0194,Vins des Allobroges
+a0195,Chablis Grand Cru 'Vaudesir'
+a0196,Auxey-Duresses
+a0197,Adelaide Hills
+a0198,Chassagne-Montrachet 1er Cru 'Abbaye de Morgeot'
+a0199,Willamette Valley
+a0200,Vino d'Italia
+a0201,Provence
+a0202,Côtes de Provence
+a0203,Palette
+a0204,Bandol
+a0205,Languedoc
+a0206,Lazio
+a0207,Valpolicella
+a0208,Malvasia di Casorzo d'Asti
+a0209,Vipava
+a0210,Mendocino County
+a0211,Kakheti
+a0212,Vin de France
+a0213,Vinho Verde
+a0214,Pennsylvania
+a0215,Corbières
+a0216,Península de Setúbal
+a0217,Malvasia di Castelnuovo don Bosco
+a0218,Rosé d'Anjou
+a0219,Lake County
+a0220,Catalunya
+a0221,Achaia
+a0222,Rioja Alta
+a0223,Coteaux d'Aix-en-Provence
+a0224,Paestum
+a0225,Setúbal
+a0226,Coste della Sesia
+a0227,Getariako Txakolina
+a0228,Weinland
+a0229,Jerusalem
+a0230,Cerasuolo d'Abruzzo
+a0231,Coteaux Varois en Provence
+a0232,Yamhill-Carlton District
+a0233,Corsica
+a0234,Coastal Region
+a0235,Venezia Giulia
+a0236,Bizkaiko Txakolina
+a0237,Štajerska
+a0238,Upper Loire
+a0239,Rheingau
+a0240,Gigondas
+a0241,El Dorado
+a0242,Neusiedlersee-Hügelland
+a0243,Burgenland
+a0244,Ardèche
+a0245,Terre Siciliane
+a0246,Fthiotida
+a0247,Bairrada
+a0248,Valencia
+a0249,Marlborough
+a0250,Happy Canyon of Santa Barbara
+a0251,Victoria
+a0252,Indiana
+a0253,Chehalem Mountains
+a0254,Tavel
+a0255,Costières-de-Nîmes
+a0256,Colline Novaresi
+a0257,Vigneti delle Dolomiti
+a0258,Emilia-Romagna
+a0259,Côtes du Roussillon
+a0260,Vallagarina
+a0261,Cassis
+a0262,Central Otago
+a0263,Luberon
+a0264,Finger Lakes
+a0265,Chablais
+a0266,Oregon
+a0267,Vaucluse
+a0268,South Eastern Australia
+a0269,Long Island
+a0270,Ile de Beaute
+a0271,Benaco Bresciano
+a0272,Chinon
+a0273,San Luis Obispo County
+a0274,Umbria
+a0275,Costa d'Amalfi
+a0276,Blaye - Côtes de Bordeaux
+a0277,Beaujolais
+a0278,Terratico di Bibbona
+a0279,Bellet
+a0280,Drôme
+a0281,Saint-Drézéry
+a0282,Vallee du Paradis
+a0283,Navarra
+a0284,Clear Lake
+a0285,Patrimonio
+a0286,Alexander Valley
+a0287,Columbia Valley
+a0288,Mallorca
+a0289,Aude
+a0290,Steiermark
+a0291,Côtes de Gascogne
+a0292,Clare Valley
+a0293,Algarve
+a0294,Languedoc-Roussillon
+a0295,Lake Erie New York
+a0296,Rhone Valley
+a0297,Garda
+a0298,Denizli
+a0299,North Coast
+a0300,Cabernet d'Anjou
+a0301,Arroyo Seco
+a0302,Mornington Peninsula
+a0303,South Eastern
+a0304,Champagne Premier Cru
+a0305,Champagne Grand Cru 'Ambonnay'
+a0306,Conegliano-Valdobbiadene Prosecco Superiore
+a0307,Champagne Grand Cru
+a0308,Champagne Grand Cru 'Avize'
+a0309,Champagne Grand Cru 'Aÿ'
+a0310,Trento
+a0311,Cava
+a0312,Franciacorta
+a0313,Champagne Grand Cru 'Le Mesnil-sur-Oger'
+a0314,Coteaux Champenois
+a0315,Serra Gaúcha
+a0316,Moscato d'Asti
+a0317,Soave
+a0318,Provincia di Pavia
+a0319,Conegliano-Valdobbiadene Prosecco
+a0320,Champagne Grand Cru 'Cramant'
+a0321,Vale dos Vinhedos
+a0322,Trentino
+a0323,Gavi
+a0324,Brachetto d'Acqui
+a0325,Champagne Grand Cru 'Oger'
+a0326,Recioto della Valpolicella
+a0327,Niagara Peninsula
+a0328,Tokaj
+a0329,Arbois
+a0330,Sauternes
+a0331,Vin Santo di Montepulciano
+a0332,Santorini
+a0333,Carmignano
+a0334,Montefalco Sagrantino
+a0335,Passito di Pantelleria
+a0336,Montecarlo
+a0337,Vin Santo del Chianti Classico
+a0338,Constantia
+a0339,Barsac
+a0340,Jurançon
+a0341,Quarts de Chaume
+a0342,Rutherglen
+a0343,Alsace Grand Cru 'Rangen'
+a0344,Calabria
+a0345,Friuli-Venezia Giulia
+a0346,Alsace Grand Cru 'Altenberg de Bergheim'
+a0347,Atlàntida
+a0348,Vin Santo del Chianti
+a0349,Recioto della Valpolicella Classico
+a0350,Monbazillac
+a0351,Albana di Romagna
+a0352,Racha-Lechkhumi
+a0353,Neusiedlersee
+a0354,Maule Valley
+a0355,Pineau des Charentes
+a0356,Orvieto Classico
+a0357,Moscato di Scanzo
+a0358,Cinque Terre
+a0359,Palmela
+a0360,Marsala
+a0361,Montlouis-sur-Loire
+a0362,Brauneberg
+a0363,Chianti
+a0364,Vin Santo di Carmignano
+a0365,Malvasia delle Lipari
+a0366,Vin Santo
+a0367,Paarl
+a0368,Breganze
+a0369,Liguria
+a0370,Virginia
+a0371,Weinviertel
+a0372,Yakima Valley
+a0373,Terrazze Retiche di Sondrio
+a0374,Vin Santo Sant'Antimo
+a0375,Fully
+a0376,Vintage Port
+a0377,Montilla-Moriles
+a0378,Pedro Ximénez Sherry (PX)
+a0379,Colheita Port
+a0380,Tawny Port
+a0381,Jerez-Xérès-Sherry
+a0382,Aged Tawny Port
+a0383,Palo Cortado Sherry
+a0384,Single Quinta Vintage Port (SQVP)
+a0385,Late Bottled Vintage Port (LBV)
+a0386,Porto
+a0387,Reserve Port
+a0388,Amontillado Sherry
+a0389,Muscat de Rivesaltes
+a0390,Oloroso Sherry
+a0391,Barossa
+a0392,Banyuls Grand Cru
