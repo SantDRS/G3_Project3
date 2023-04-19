@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"0edff641f3ab4f8aa1138c7f77104a47","collectionName":"wine_type","type":"collection"}
