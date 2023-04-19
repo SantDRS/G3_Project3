@@ -53,5 +53,10 @@ def get_pairing_collection():
     # Return the countries as a JSON object
     return dumps(pairingList)
 
+@app.route('/pairing_collection/<varietal>')
+def get_varietal(varietal):
+    varietal_description = list(pairing_collection.find({'varietal':varietal}))
+    return dumps(varietal_description)
+
 if __name__ == '__main__':
     app.run(debug=True)
