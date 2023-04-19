@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wine Selection Dashboard</title>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+	<h1>Wine Selection Dashboard</h1>
+	
+	<!-- Add dropdown list to select dish pairings -->
+	<label for="dish-pairing">Select a dish pairing:</label>
+	<select id="dish-pairing" name="dish-pairing">
+		<option value="beef">Beef</option>
+		<option value="poultry">Poultry</option>
+		<option value="fish">Fish</option>
+		<option value="desserts">Desserts</option>
+	</select>
+	
+	<!-- Add a div to hold the wine pairing recommendations -->
+	<div id="wine-pairings"></div>
+	
+	<!-- Add a div to hold the top ten wine chart -->
+	<div id="top-ten-chart"></div>
+	
+	<script>
+		// Define a function to get wine pairings based on dish pairing selection
+		function getWinePairings(dishPairing) {
+			// Replace this with your code to get wine pairings based on dish pairing selection
+			// This is just a placeholder function that returns a static list of wine pairings
+			var winePairings = ["Cabernet Sauvignon", "Pinot Noir", "Chardonnay", "Riesling"];
+			
+			// Return the list of wine pairings
+			return winePairings;
+		}
+		
+		// Define a function to get top ten wines based on wine pairing recommendations
+		function getTopTenWines(winePairings) {
+			// Replace this with your code to get top ten wines based on wine pairing recommendations
+			// This is just a placeholder function that returns a static list of top ten wines
+			var topTenWines = {
+				"Cabernet Sauvignon": 50,
+				"Pinot Noir": 30,
+				"Chardonnay": 25,
+				"Riesling": 20,
+				"Sauvignon Blanc": 18,
+				"Merlot": 15,
+				"Syrah": 12,
+				"Zinfandel": 10,
+				"Malbec": 8,
+				"Sangiovese": 5
+			};
+			
+			// Sort the top ten wines by score in descending order
+			var sortedTopTenWines = Object.keys(topTenWines).sort(function(a,b){return topTenWines[b]-topTenWines[a]});
+			
+			// Return the sorted list of top ten wines
+			return sortedTopTenWines;
+		}
+		
+		// Define a function to update the wine pairing recommendations and top ten wine chart when the dropdown selection changes
+		function updateWinePairingsAndTopTenChart() {
+			// Get the selected dish pairing
+			var dishPairing = document.getElementById("dish-pairing").value;
+			
+			// Get the wine pairings based on the selected dish pairing
+			var winePairings = getWinePairings(dishPairing);
+			
+			// Create a list of wine pairing recommendations
+			var winePairingList = "";
+			for (var i = 0; i < winePairings.length; i++) {
+				winePairingList += "<li>" + winePairings[i] + "</li>";
+			
