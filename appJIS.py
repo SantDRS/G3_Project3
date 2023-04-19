@@ -14,6 +14,10 @@ region_collection = client['wineDB']['region']
 filteredWine_collection = client['wineDB']['filteredWine']
 pairing_collection = client['wineDB']['pairing_by_varietal']
 
+@app.route('/')
+def index():
+    return "here are your options"
+
 @app.route('/wines')
 def get_wines():
     # Retrieve all documents from the Wines collection
