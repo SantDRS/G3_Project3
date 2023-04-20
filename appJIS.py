@@ -1,9 +1,12 @@
 from flask import Flask, jsonify
+from flask_cors import CORS
 import json
 from bson.json_util import dumps
 from pymongo import MongoClient
 
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": ["http://localhost:5000", "*"]}})
+
 
 # Define the MongoDB connection details
 client = MongoClient('localhost', 27017)
@@ -26,9 +29,7 @@ def get_wines():
     wine_str = dumps(wines)
     wine_son = json.loads(wine_str)
     # Return the wines as a JSON object
-    response = jsonify({"wines":wine_son})
-    response.headers.add('Access-Control-Allow-Origin', 'http://localhost:8080')
-    return response
+    return jsonify({"wines":wine_son})
 
 @app.route('/countries')
 def get_countries():
@@ -37,9 +38,7 @@ def get_countries():
     country_str = dumps(countries)
     country_son = json.loads(country_str)
     # Return the countries as a JSON object
-    response = jsonify({"countries":country_son})
-    response.headers.add('Access-Control-Allow-Origin', 'http://localhost:8080')
-    return response
+    return jsonify({"countries":country_son})
 
 @app.route('/regions')
 def get_regions():
@@ -48,9 +47,7 @@ def get_regions():
     reg_str = dumps(regions)
     reg_son = json.loads(reg_str)
     # Return the regions as a JSON object
-    response = jsonify({"regions":reg_son})
-    response.headers.add('Access-Control-Allow-Origin', 'http://localhost:8080')
-    return response
+    return jsonify({"regions":reg_son})
 
 @app.route('/filteredWine')
 def get_filteredWine():
@@ -59,9 +56,7 @@ def get_filteredWine():
     filt_str = dumps(filteredWine)
     filt_son = json.loads(filt_str)
     # Return the countries as a JSON object
-    response = jsonify({"filteredWine":filt_son})
-    response.headers.add('Access-Control-Allow-Origin', 'http://localhost:8080')
-    return response
+    return jsonify({"filteredWine":filt_son})
 
 @app.route('/pairing_collection')
 def get_pairing_collection():
@@ -70,27 +65,21 @@ def get_pairing_collection():
     pair_str = dumps(pairingList)
     pair_son = json.loads(pair_str)
     # Return the countries as a JSON object
-    response = jsonify({"pairing":pair_son})
-    response.headers.add('Access-Control-Allow-Origin', 'http://localhost:8080')
-    return response
+    return jsonify({"pairing":pair_son})
 
 @app.route('/pairing_collection/<varietal>')
 def get_varietal(varietal):
     varietal_description = list(pairing_collection.find({'varietal':varietal}))
     var_str = dumps(varietal_description)
     var_son = json.loads(var_str)
-    response = jsonify({"varietal":var_son})
-    response.headers.add('Access-Control-Allow-Origin', 'http://localhost:8080')
-    return response
+    return jsonify({"varietal":var_son})
 
 @app.route('/pairing_collection/rec/<dish>')
 def get_recommendation(dish):
     recommend_varietal = list(pairing_collection.find({'pairing':{'$in': [dish]}}))
     rec_str = dumps(recommend_varietal)
     rec_son = json.loads(rec_str)
-    response = jsonify({"recommendations":rec_son})
-    response.headers.add('Access-Control-Allow-Origin', 'http://localhost:8080')
-    return response
+    return jsonify({"recommendations":rec_son})
 
 if __name__ == '__main__':
     app.run(debug=True)
