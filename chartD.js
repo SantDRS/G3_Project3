@@ -6,14 +6,6 @@ let dishSelect = d3.select("#dish-pairing").on('change', function() {
     d3.json(dishUrl).then(function(pairing_json) {
         console.log(pairing_json)
 
-        let pairing_list = [];
-
-        for (let i = 0; i < pairing_json.length; i++) {
-            pairing_list.push(pairing_json.recommendations[i]['varietal']);
-        };
-        
-        console.log(pairing_list)
-
         d3.select("#pairing-dropdown")
             .selectAll("option")
             .remove()

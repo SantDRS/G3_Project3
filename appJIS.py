@@ -100,7 +100,7 @@ def get_list_wines(varietal):
     wines = list(filteredWine_collection.find(query,fields).sort(sort))
     wines_str = dumps(wines)
     list_of_wines = json.loads(wines_str)
-    return jsonify({"List of Wines": list_of_wines})
+    return jsonify({"list_of_wines": list_of_wines})
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -77,14 +77,16 @@
 		<div class = "text-center">
 			<!-- Add dropdown list to select dish pairings -->
 			<label for="pairing-dropdown">Select a wine varietal:</label>
-			<select id="pairing-dropdown" name="dish-pairing"></select>
+			<select id="pairing-dropdown" name="dish-pairing">
+				<option value = "default">--Select Varietal--</option>
+			</select>
 			<script src = "chartD.js"></script>
 		</div>
 
 		<div class = "text-left">
 			<!-- Add list to display wines -->
 			<ul id="wines-list" name="wines-list">
-				<li>Wine List</li>
+				<header>Wine List</header>
 			</ul>
 			<script src="chartB.js"></script>
 		</div>
