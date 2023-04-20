@@ -81,5 +81,15 @@ def get_recommendation(dish):
     rec_son = json.loads(rec_str)
     return jsonify({"recommendations":rec_son})
 
+@app.route('/filteredWine/top/<varietal>')
+def get_top_wines(varietal):
+    query = {'varietal':varietal}
+    fields = {'wine': 1, 'average rating': 1, 'image': 1}
+    sort = [{"average rating", -1}]
+    limit = 5
+    top_wine = list(filteredWine_collection.find(query,fields).sort(sort).limit(limit))
+    top_wine_str = dumps(top_wine)
+    top_wine_son = json.loads(top_wine_str)
+    return jsonify({"Top Wines": top_wine_son})
 if __name__ == '__main__':
     app.run(debug=True)
