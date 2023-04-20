@@ -1,72 +1,84 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Wine Selection Dashboard</title>
-	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-</head>
-<body>
-	<h1>Wine Selection Dashboard</h1>
-	
-	<!-- Add dropdown list to select dish pairings -->
-	<label for="dish-pairing">Select a dish pairing:</label>
-	<select id="dish-pairing" name="dish-pairing">
-		<option value="beef">Beef</option>
-		<option value="poultry">Poultry</option>
-		<option value="fish">Fish</option>
-		<option value="desserts">Desserts</option>
-	</select>
-	
-	<!-- Add a div to hold the wine pairing recommendations -->
-	<div id="wine-pairings"></div>
-	
-	<!-- Add a div to hold the top ten wine chart -->
-	<div id="top-ten-chart"></div>
-	
-	<script>
-		// Define a function to get wine pairings based on dish pairing selection
-		function getWinePairings(dishPairing) {
-			// Replace this with your code to get wine pairings based on dish pairing selection
-			// This is just a placeholder function that returns a static list of wine pairings
-			var winePairings = ["Cabernet Sauvignon", "Pinot Noir", "Chardonnay", "Riesling"];
-			
-			// Return the list of wine pairings
-			return winePairings;
-		}
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Wine Selection Dashboard</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="main.css">
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		<script src="https://d3js.org/d3.v5.min.js"></script>
+		<style>
+			.wine-box {
+				background-color: #722f37;
+				padding: 20px;
+				margin-bottom: 20px;
+				color: #fff;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class = "wine-box">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 jumbotron text-center">
+						<h1>Wine Pairing Dashboard</h1>
+						<p>Use our dashboard to help choose a wine for tonights dinner!</p>
+						<div style="display:flex; justify-content:space-between;">
+							<div style="position: fixed; top: 15%; left: 0; transform: translateY(-50%); z-index: 9999;">
+								<img src="https://i.gifer.com/DVJ3.gif" alt="Example GIF" width="200" height="200">
+							</div>
+							<div style="position: fixed; top: 15%; right: 0; transform: translateY(-50%); z-index: 9999;">
+								<img src="https://i.gifer.com/DVJ3.gif" alt="Example GIF" width="200" height="200">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		
-		// Define a function to get top ten wines based on wine pairing recommendations
-		function getTopTenWines(winePairings) {
-			// Replace this with your code to get top ten wines based on wine pairing recommendations
-			// This is just a placeholder function that returns a static list of top ten wines
-			var topTenWines = {
-				"Cabernet Sauvignon": 50,
-				"Pinot Noir": 30,
-				"Chardonnay": 25,
-				"Riesling": 20,
-				"Sauvignon Blanc": 18,
-				"Merlot": 15,
-				"Syrah": 12,
-				"Zinfandel": 10,
-				"Malbec": 8,
-				"Sangiovese": 5
-			};
+		<div class = "text-center">
+			<!-- Add dropdown list to select dish pairings -->
+			<label for="dish-pairing">Select a dish pairing:</label>
+			<select id="dish-pairing" name="dish-pairing">
+				<option value="">--Select a dish pairing--</option>
+				<option value="beef">Beef</option>
+				<option value="chicken">Chicken</option>
+				<option value="crab">Crab</option>
+				<option value="cured meat">Cured Meat</option>
+				<option value="dessert">Dessert</option>
+				<option value="duck">Duck</option>
+				<option value="fish">Fish</option>
+				<option value="french fries">French Fries</option>
+				<option value="fruit">Fruit</option>
+				<option value="game">Game</option>
+				<option value="indian">Indian</option>
+				<option value="italian">Italian</option>
+				<option value="lamb">Lamb</option>	
+				<option value="lobster">Lobster</option>
+				<option value="mexican">Mexican</option>
+				<option value="pasta">Pasta</option>
+				<option value="pizza">Pizza</option>
+				<option value="plum">Plum</option>	
+				<option value="pork">Pork</option>
+				<option value="quail">Quail</option>
+				<option value="salmon">Salmon</option>
+				<option value="shellfish">Shellfish</option>
+				<option value="soft cheese">Soft Cheese</option>
+				<option value="spice">Spice</option>
+				<option value="sushi">Sushi</option>
+				<option value="tapas">Tapas</option>
+			</select>
 			
-			// Sort the top ten wines by score in descending order
-			var sortedTopTenWines = Object.keys(topTenWines).sort(function(a,b){return topTenWines[b]-topTenWines[a]});
-			
-			// Return the sorted list of top ten wines
-			return sortedTopTenWines;
-		}
-		
-		// Define a function to update the wine pairing recommendations and top ten wine chart when the dropdown selection changes
-		function updateWinePairingsAndTopTenChart() {
-			// Get the selected dish pairing
-			var dishPairing = document.getElementById("dish-pairing").value;
-			
-			// Get the wine pairings based on the selected dish pairing
-			var winePairings = getWinePairings(dishPairing);
-			
-			// Create a list of wine pairing recommendations
-			var winePairingList = "";
-			for (var i = 0; i < winePairings.length; i++) {
-				winePairingList += "<li>" + winePairings[i] + "</li>";
-			
+			<!-- Add code to display wine recommendations -->
+			<div id="wine-recommendations"></div>
+					
+			<script>
+			// Add code to fetch and display wine recommendations
+			</script>
+		</div>
+
+	</body>
+</html>
