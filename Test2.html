@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="main.css">
 		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 		<script src="https://d3js.org/d3.v5.min.js"></script>
+		
 		<style>
 			.wine-box {
 				background-color: #722f37;
@@ -80,9 +81,12 @@
 			<script src = "chartD.js"></script>
 		</div>
 
-		<div class = "text-center">
+		<div class = "text-left">
 			<!-- Add list to display wines -->
-			<ul id="wines-list"></ul>
+			<ul id="wines-list" name="wines-list">
+				<li>Wine List</li>
+			</ul>
+			<script src="chartB.js"></script>
 		</div>
 
 	</body>
