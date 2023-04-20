@@ -24,6 +24,6 @@ let dishSelect = d3.select("#dish-pairing").on('change', function() {
             .enter()
             .append("option")
             .text(function(d) { return d.varietal; })
-            .attr("value", function(d) { return d.varietal; });
+            .attr("value", function(d) { return d.varietal; });            
     });
 });

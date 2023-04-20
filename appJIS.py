@@ -91,5 +91,16 @@ def get_top_wines(varietal):
     top_wine_str = dumps(top_wine)
     top_wine_son = json.loads(top_wine_str)
     return jsonify({"Top Wines": top_wine_son})
+
+@app.route('/filteredWine/List/<varietal>')
+def get_list_wines(varietal):
+    query = {'varietal':varietal}
+    fields = {'wine': 1, 'average rating': 1}
+    sort = [{"wine", -1}]
+    wines = list(filteredWine_collection.find(query,fields).sort(sort))
+    wines_str = dumps(wines)
+    list_of_wines = json.loads(wines_str)
+    return jsonify({"List of Wines": list_of_wines})
+
 if __name__ == '__main__':
     app.run(debug=True)
