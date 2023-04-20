@@ -58,5 +58,10 @@ def get_varietal(varietal):
     varietal_description = list(pairing_collection.find({'varietal':varietal}))
     return dumps(varietal_description)
 
+@app.route('/pairing_collection/rec/<dish>')
+def get_recommendation(dish):
+    recommend_varietal = list(pairing_collection.find({'pairing':{'$in': [dish]}}))
+    return dumps(recommend_varietal)
+
 if __name__ == '__main__':
     app.run(debug=True)
