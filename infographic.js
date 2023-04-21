@@ -5,6 +5,7 @@ function buildPanel(data){
     console.log(data);
     // Use D3 to select the table body
     let tbody = d3.select("tbody");
+    tbody.selectAll("tr").remove();
     //loop over data
     for(i = 0; i < data['Top Wines'].length; i++){
         let row = tbody.append("tr");
