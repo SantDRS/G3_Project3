@@ -72,16 +72,16 @@
 				<option value="sushi">Sushi</option>
 				<option value="tapas">Tapas</option>
 			</select>
-			<script src = "infographic.js"></script>
 		</div>
 
 		<div class = "text-center">
 			<!-- Add dropdown list to select dish pairings -->
 			<label for="pairing-dropdown">Select a wine varietal:</label>
-			<select id="pairing-dropdown" name="dish-pairing">
+			<select id="pairing-dropdown" name="dish-pairing" onchange = 'makeInfographic()'>
 				<option value = "default">--Select Varietal--</option>
 			</select>
 			<script src = "chartD.js"></script>
+			<script src = "infographic.js"></script>
 		</div>
 
 		<div class = "text-left">
@@ -93,10 +93,14 @@
 		</div>
 		<div class="panel panel-primary">
 			<div class="panel-heading">
-			  <h3 class="panel-title">Demographic Info</h3>
+			  <h3 class="panel-title">Wine Info</h3>
 			</div>
-			<div id="sample-metadata" class="panel-body"></div>
-		  </div>
+			<div id="wineInfo" class="panel-body">
+				<table id ='wineTable'>
+					<tbody></tbody>
+				</table>
+			</div>
+		</div>
 
 	</body>
 
