@@ -77,7 +77,7 @@
 		<div class = "text-center">
 			<!-- Add dropdown list to select dish pairings -->
 			<label for="pairing-dropdown">Select a wine varietal:</label>
-			<select id="pairing-dropdown" name="dish-pairing" onchange = 'makeInfographic()'>
+			<select id="pairing-dropdown" name="dish-pairing" onchange = 'makeInfographic(this.value)'>
 				<option value = "default">--Select Varietal--</option>
 			</select>
 			<script src = "chartD.js"></script>

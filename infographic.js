@@ -10,6 +10,7 @@ function buildPanel(data){
         let row = tbody.append("tr");
         row.append("td").text(data['Top Wines'][i]['wine']);
     };
+
 }
 
 function makeInfographic(){
@@ -18,8 +19,11 @@ function makeInfographic(){
     const url = 'http://127.0.0.1:5000/filteredWine/top/';
     let variety_url = url + variety;
     console.log(variety_url);
+
     d3.json(variety_url).then(function(data){
         // console.log(data)
+        let tableElement = document.getElementById('table');
+        tableElementinnerHTML = '';
         buildPanel(data)
     });
 
