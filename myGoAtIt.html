@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Wine Selection Dashboard</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="main.css">
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		<script src="https://d3js.org/d3.v5.min.js"></script>
+		
+		<style>
+			.wine-box {
+				background-color: #722f37;
+				padding: 20px;
+				margin-bottom: 20px;
+				color: #fff;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class = "wine-box">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 jumbotron text-center">
+						<h1>Wine Pairing Dashboard</h1>
+						<p>Use our dashboard to help choose a wine for tonights dinner!</p>
+						<div style="display:flex; justify-content:space-between;">
+							<div style="position: fixed; top: 15%; left: 0; transform: translateY(-50%); z-index: 9999;">
+								<img src="https://i.gifer.com/DVJ3.gif" alt="Example GIF" width="200" height="200">
+							</div>
+							<div style="position: fixed; top: 15%; right: 0; transform: translateY(-50%); z-index: 9999;">
+								<img src="https://i.gifer.com/DVJ3.gif" alt="Example GIF" width="200" height="200">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class = "text-center">
+			<!-- Add dropdown list to select dish pairings -->
+			<label for="dish-pairing">Select a dish pairing:</label>
+			<select id="dish-pairing" name="dish-pairing">
+				<option value="">--Select a dish pairing--</option>
+				<option value="beef">Beef</option>
+				<option value="chicken">Chicken</option>
+				<option value="crab">Crab</option>
+				<option value="cured meat">Cured Meat</option>
+				<option value="dessert">Dessert</option>
+				<option value="duck">Duck</option>
+				<option value="fish">Fish</option>
+				<option value="french fries">French Fries</option>
+				<option value="fruit">Fruit</option>
+				<option value="game">Game</option>
+				<option value="indian">Indian</option>
+				<option value="italian">Italian</option>
+				<option value="lamb">Lamb</option>	
+				<option value="lobster">Lobster</option>
+				<option value="mexican">Mexican</option>
+				<option value="pasta">Pasta</option>
+				<option value="pizza">Pizza</option>
+				<option value="plum">Plum</option>	
+				<option value="pork">Pork</option>
+				<option value="quail">Quail</option>
+				<option value="salmon">Salmon</option>
+				<option value="shellfish">Shellfish</option>
+				<option value="soft cheese">Soft Cheese</option>
+				<option value="spice">Spice</option>
+				<option value="sushi">Sushi</option>
+				<option value="tapas">Tapas</option>
+			</select>
+		</div>
+
+		<div class = "text-center">
+			<!-- Add dropdown list to select dish pairings -->
+			<label for="pairing-dropdown">Select a wine varietal:</label>
+			<select id="pairing-dropdown" name="dish-pairing" onchange = 'makeInfographic()'>
+				<option value = "default">--Select Varietal--</option>
+			</select>
+			<script src = "chartD.js"></script>
+			<script src = "infographic.js"></script>
+		</div>
+
+		<div class = "text-left">
+			<!-- Add list to display wines -->
+			<ul id="wines-list" name="wines-list">
+				<header>Wine List</header>
+			</ul>
+			<script src="chartB.js"></script>
+		</div>
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+			  <h3 class="panel-title">Wine Info</h3>
+			</div>
+			<div id="wineInfo" class="panel-body">
+				<table id ='wineTable'>
+					<tbody></tbody>
+				</table>
+			</div>
+		</div>
+
+	</body>
+
+</html>
