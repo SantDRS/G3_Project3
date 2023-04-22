@@ -9,7 +9,11 @@
 		<link rel="stylesheet" href="main.css">
 		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 		<script src="https://d3js.org/d3.v5.min.js"></script>
-		
+		<style>
+			.body {
+				background-color: #fef9e7;
+			}
+		</style>
 		<style>
 			.wine-box {
 				background-color: #722f37;
@@ -18,24 +22,68 @@
 				color: #fff;
 			}
 		</style>
+		<style>
+			.panel {
+				max-width: 400px;
+				margin: 0 auto;
+				background-color: #fef9e7;
+				color: #722f37;
+				border-color:#722f37;
+			}
+		</style>
+		<style>
+			.panel-heading{
+				background-color: #722f37;
+				border-color:#722f37;
+			}
+			.panel-title {
+				max-width: 400px;
+				margin: 0 auto;
+				color: #fef9e7;
+				background-color: #722f37;
+			}
+		</style>
+		<style>
+			.col-md-4 {
+				max-width: 400px;
+				margin-right: auto;
+				padding: 20px;
+				text-align: center;
+				margin-bottom: 0;
+			}
+			.scroll {
+				background-color: #fef9e7;
+				width: 400px;
+				height: 300px;
+				overflow-x: hidden;
+				overflow-y: auto;
+				text-align: left;
+				padding: 20px;
+				margin-top: 0;
+			} 
+			.wine-list{
+				text-align: left;
+				margin-top: 0;
+			}
+		</style>
+
+
+
 	</head>
 
-	<body>
+	<body class = "body">
+
 		<div class = "wine-box">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 jumbotron text-center">
-						<h1>Wine Pairing Dashboard</h1>
-						<p>Use our dashboard to help choose a wine for tonights dinner!</p>
-						<div style="display:flex; justify-content:space-between;">
-							<div style="position: fixed; top: 15%; left: 0; transform: translateY(-50%); z-index: 9999;">
-								<img src="https://i.gifer.com/DVJ3.gif" alt="Example GIF" width="200" height="200">
-							</div>
-							<div style="position: fixed; top: 15%; right: 0; transform: translateY(-50%); z-index: 9999;">
-								<img src="https://i.gifer.com/DVJ3.gif" alt="Example GIF" width="200" height="200">
-							</div>
-						</div>
-					</div>
+			<div style="display:flex; justify-content:space-between;">
+				<div style="top: 25%; left: 0; transform: translateY(0%); z-index: 9999;">
+					<img src="https://i.gifer.com/DVJ3.gif" alt="Example GIF" width="200" height="200">
+				</div>
+				<div class="col-md-12 jumbotron text-center">
+					<h1>Wine Pairing Dashboard</h1>
+					<p>Use our dashboard to help choose a wine for tonights dinner!</p>
+				</div>
+				<div style="top: 25%; right: 0; transform: translateY(0%); z-index: 9999;">
+					<img src="https://i.gifer.com/DVJ3.gif" alt="Example GIF" width="200" height="200">
 				</div>
 			</div>
 		</div>
@@ -77,31 +125,36 @@
 		<div class = "text-center">
 			<!-- Add dropdown list to select dish pairings -->
 			<label for="pairing-dropdown">Select a wine varietal:</label>
-			<select id="pairing-dropdown" name="dish-pairing" onchange = 'makeInfographic()'>
+			<select id="pairing-dropdown" name="dish-pairing" onchange = 'makeInfographic(this.value)'>
 				<option value = "default">--Select Varietal--</option>
 			</select>
 			<script src = "chartD.js"></script>
 			<script src = "infographic.js"></script>
 		</div>
 
-		<div class = "text-left">
+		<div class = "row">
 			<!-- Add list to display wines -->
-			<ul id="wines-list" name="wines-list">
-				<header>Wine List</header>
-			</ul>
-			<script src="chartB.js"></script>
-		</div>
-		<div class="panel panel-primary">
-			<div class="panel-heading">
-			  <h3 class="panel-title">Wine Info</h3>
+			<div class="col-md-4">
+				<h3>Wine List</h3>
+				<div class="scroll">
+					<ul id="wines-list" class = "panel-body"></ul>
+				</ul>
+				<script src="chartB.js"></script>
+				</div>
 			</div>
-			<div id="wineInfo" class="panel-body">
-				<table id ='wineTable'>
-					<tbody></tbody>
-				</table>
+			<div class="panel panel">
+				<div class="panel-heading">
+				  <h3 class="panel-title">Wine Info</h3>
+				</div>
+				<div id="wineInfo" class="panel-body">
+					<table id ='wineTable'>
+						<tbody></tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 
 	</body>
 
 </html>
+
