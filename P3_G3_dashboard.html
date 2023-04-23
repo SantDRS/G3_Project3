@@ -9,7 +9,18 @@
 		<link rel="stylesheet" href="css/P3_G3_main.css">
 		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 		<script src="https://d3js.org/d3.v5.min.js"></script>
+		<!-- Leaflet CSS -->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+			integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+			crossorigin="" />
 
+		<!-- Leaflet JavaScript code -->
+		<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+			integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+			crossorigin=""></script>
+		
+		<!-- Our CSS -->
+  		<link rel="stylesheet" type="text/css" href="css/style.css">
 		
 	</head>
 
@@ -168,7 +179,23 @@
 			<script src="js/P3_G3_bar.js"></script>
 		</div>
 	</div>
-
+	
+	<div class="text-center" id="wineryMapText">
+		<h3>Winery Map</h3>
+		<div class="border-box" id="wineryMapBox">
+		
+			<!-- The div where we'll insert our map -->
+			<div id="map"></div>
+			<!-- JavaScript file -->
+			<script type="text/javascript" src="js/P3_G3_wineryMap.js"></script>
+	
+		</div>
+	</div>
+	<div class = "row">
+		<div class="text-center">
+			<p>We hope you enjoyed our dashboard!</p>
+		</div>
+	</div>
 	</body>
 
 </html>

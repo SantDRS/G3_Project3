@@ -490,7 +490,7 @@ let overlayMaps = {
 // Create a map object, and set the default layers.
 let myMap = L.map("map", {
   center: [0, 0],
-  zoom: 3,
+  zoom: 2,
   layers: [street, cityLayer]
 });
 

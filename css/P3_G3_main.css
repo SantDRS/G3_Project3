@@ -89,3 +89,24 @@
         border: 10px solid #722f37;
         justify-content: space-between;
     }
+
+    .text-center#wineryMapText {
+        margin-bottom: 20px;
+    }
+
+    .border-box#wineryMapBox{
+        border: 10px solid #722f37;
+        height: 600px;
+        width: 60%;
+        margin: auto;
+        align-items: center;
+    }
+#map {
+        height: auto;
+        width: auto;
+        margin: auto;
+        border: 20px #722f37;
+        align-items: center;
+
+    }
+    
