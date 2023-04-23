@@ -1,8 +1,7 @@
 let name = 'Countries'
 
-let title = `Wines Produced x Country`;
 
-let books = ["France", "United_States", "Germany", "Italy", "Austria", "Argentina", "Other"];
+let books = ["France", "United States", "Germany", "Italy", "Austria", "Argentina", "Other"];
 
 let timesRead = [627,321, 42, 31, 16, 10, 40];
 
@@ -20,7 +19,6 @@ let trace1 = {
 let data = [trace1];
 
 let layout = {
-  title: title,
   plot_bgcolor: "#fffff8",
   paper_bgcolor: "#fffff8"
 };
