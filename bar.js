@@ -1,21 +1,29 @@
 let name = 'Countries'
 
-let title = `Counties produced wines`
+let title = `Wines Produced x Country`;
 
-let books = ["United_States", "Italy", "Argentina", "France", "Germany", "Austria", "Other"]
+let books = ["France", "United_States", "Germany", "Italy", "Austria", "Argentina", "Other"];
 
-let timesRead = [321, 31, 10, 627, 42, 16, 40]
+let timesRead = [627,321, 42, 31, 16, 10, 40];
+
+let colors = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2"];
 
 let trace1 = {
   x: books,
   y: timesRead,
-  type: 'bar'
+  type: 'bar',
+  marker: {
+    color: colors
+  }
 };
 
 let data = [trace1];
 
 let layout = {
-  title: title
+  title: title,
+  plot_bgcolor: "#fffff8",
+  paper_bgcolor: "#fffff8"
 };
 
-Plotly.newPlot("bar", data, layout)
+Plotly.newPlot("bar", data, layout);
+

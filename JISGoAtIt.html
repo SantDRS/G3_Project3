@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="main.css">
 		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 		<script src="https://d3js.org/d3.v5.min.js"></script>
-		
+
 		<style>
 			.header-box {
 				background-color: #722f37;
@@ -27,7 +27,7 @@
 			.panel {
 				max-width: 400px;
 				margin: 0 auto;
-				margin-top: 55px;
+				margin-top: 30px;
 				background-color: #fef9e7;
 				color: #722f37;
 				border-color:#722f37;
@@ -49,7 +49,7 @@
 				padding: 0 15px;
 				justify-content: space-between;
 			}
-			.col-md-4 {
+			.col-md-4#column1 {
 				max-width: 400px;
 				margin: auto;
 				padding-left: 50px;
@@ -57,13 +57,13 @@
 				margin-bottom: 0;
 			}
 			.scroll {
-				background-color: #fef9e7;
+				background-color: #fffff8;
+				width: 400px;
 				height: 300px;
-				overflow-x: hidden;
 				overflow-y: auto;
+				overflow-wrap: break-word;
 				text-align: left;
 				padding-left: 20px;
-				padding-right: 20px;
 				padding-top: 0px;
 				margin-top: 0;
 				border-color:#722f37;
@@ -76,9 +76,20 @@
 			.panel-body#wines-list{
 				text-align: left;
 				padding-top: 0px;
+				width: 400px;
 			}
-			.border-box {
+		</style>
+		<style>
+			.border-box#pieChart {
 				border: 10px solid #722f37;
+				width: 400px;
+			}
+		</style>
+		<style>
+			.border-box#winesBar {
+				border: 10px solid #722f37;
+				margin: 20px;
+				justify-content: space-between;
 			}
 		</style>
 	</head>
@@ -111,10 +122,11 @@
 			<!-- First Column -->
 			<!-- Displays list of wines depending varietal chosen -->
 			<div class="col-md-4" id="column1">
-				<h3>Wine List</h3>
-				<div class="scroll">
-					<ul id="wines-list" class = "panel-body"></ul>
-				<script src="chartB.js"></script>
+				<div class="text-left">
+					<h3>Wine List</h3>
+					<div class="scroll">
+						<ul id="wines-list" class = "panel-body"></ul>
+					</div>
 				</div>
 			</div>
 			
@@ -122,7 +134,7 @@
 
 			<!-- Second Column -->
 			<!-- Displays top 5 wines for chosen varietal-->
-			<div class="col-md-4">
+			<div class="col-md-4" id="column2">
 
 				<!-- Add dropdown list to select dish pairings -->
 				<div class = "text-center">
@@ -166,6 +178,8 @@
 					</select>
 					<script src = "chartD.js"></script>
 					<script src = "infographic.js"></script>
+					<script src="chartB.js"></script>
+
 				</div>
 
 				<div class="panel panel">
@@ -185,17 +199,20 @@
 
 			<!-- Third Column -->
 			<!-- Displays pie chart -->
-			<div class="col-md-4">
-				<h3>Pie Chart</h3>
-				<div class="border-box">
+			<div class="col-md-4" id="column3">
+				<h3>Wine Types</h3>
+				<div class="border-box" id="pieChart">
 					<script>
 						window.onload = function() {
 						
+						CanvasJS.addColorSet("wineColors",
+						["#722f37", "#f9e8c0", "#f1ddcf", "#fad6a5", "#8e594a", "#f4c4bb"])
+						
 						var chart = new CanvasJS.Chart("chartContainer", {
 							animationEnabled: true,
-							title: {
-								text: "Wine Types"
-							},
+							colorSet: "wineColors",
+							backgroundColor: "#fffff8",
+
 							data: [{
 								type: "pie",
 								startAngle: 240,
@@ -211,7 +228,9 @@
 								]
 							}]
 						});
-						chart.render();
+						chart.render(
+							
+						);
 						}
 						</script>
 						</head>
@@ -221,6 +240,12 @@
 				</div>
 			</div>
 		</div>
+
+	<div class="border-box" id="winesBar">
+		<title>wine countries</title>
+		<div id="bar"></div>
+		<script src="bar.js"></script>
+	</div>
 
 	</body>
 

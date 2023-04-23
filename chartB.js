@@ -8,8 +8,8 @@ let varietal = d3.select("#pairing-dropdown").on('change', function() {
 
     d3.json(variety_url).then(function(variation) {
 
-    d3.select("#column1").select("#wines-list").selectAll('li').remove();
-    d3.select("#column1").select("#wines-list")
+    d3.select("#wines-list").selectAll('li').remove();
+    d3.select("#wines-list")
             .selectAll("li")
             .data(variation.list_of_wines)
             .enter()
