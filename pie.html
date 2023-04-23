@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+window.onload = function() {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title: {
+		text: "Wine Types"
+	},
+	data: [{
+		type: "pie",
+		startAngle: 240,
+		yValueFormatString: "##0",
+		indexLabel: "{label} {y}",
+		dataPoints: [
+			{y: 210, label: "Red:"},
+			{y: 150, label: "White:"},
+			{y: 625, label: "Sparkling:"},
+			{y: 36, label: "Dessert:"},
+			{y: 1, label: "Port:"},
+            {y: 67, label: "Rose:"}
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
