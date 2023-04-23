@@ -50,6 +50,7 @@ varieties (Cabernet, Riesling, etc)
 *bar chart showing the countries the wines come from
 *Wine Recommendation Drop Down List based on user dish choice
 
+(https://user-images.githubusercontent.com/120337088/233859127-9b78f381-7416-496f-a916-cef28968f714.png)
 
 Github Repository:
 https://github.com/SantDRS/G3_Project3.git
