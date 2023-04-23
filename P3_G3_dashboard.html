@@ -6,96 +6,11 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Wine Selection Dashboard</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="css/P3_G3_main.css">
 		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 		<script src="https://d3js.org/d3.v5.min.js"></script>
 
-		<style>
-			.header-box {
-				background-color: #722f37;
-				padding: 20px;
-				margin-bottom: 20px;
-				color: #fff;
-			}
-		</style>	
-		<style>
-			.body {
-				background-color: #fef9e7;
-			}
-		</style>
-		<style>
-			.panel {
-				max-width: 400px;
-				margin: 0 auto;
-				margin-top: 30px;
-				background-color: #fef9e7;
-				color: #722f37;
-				border-color:#722f37;
-			}
-			.panel-heading{
-				background-color: #722f37;
-				border-color:#722f37;
-			}
-			.panel-title {
-				max-width: 400px;
-				margin: 0 auto;
-				color: #fef9e7;
-				background-color: #722f37;
-			}
-		</style>
-		<style>
-			.row {
-				display: flex;
-				padding: 0 15px;
-				justify-content: space-between;
-			}
-			.col-md-4#column1 {
-				max-width: 400px;
-				margin: auto;
-				padding-left: 50px;
-				text-align: center;
-				margin-bottom: 0;
-			}
-			.scroll {
-				background-color: #fffff8;
-				width: 400px;
-				height: 300px;
-				overflow-y: auto;
-				overflow-wrap: break-word;
-				text-align: left;
-				padding-left: 20px;
-				padding-top: 0px;
-				margin-top: 0;
-				border-color:#722f37;
-				border: 10px solid #722f37;
-			} 
-			.wines-list{
-				text-align: left;
-				padding-top: 0px;
-			}
-			.panel-body#wines-list{
-				text-align: left;
-				padding-top: 0px;
-				width: 400px;
-			}
-		</style>
-		<style>
-			.border-box#pieChart {
-				border: 10px solid #722f37;
-				width: 400px;
-			}
-		</style>
-		<style>
-			.text-center#winesBar {
-				margin: 20px;
-			}
-			.border-box#winesBar {
-				border: 10px solid #722f37;
-				margin: 20px;
-				justify-content: space-between;
-			}
-
-		</style>
+		
 	</head>
 
 	<body class = "body">
@@ -180,9 +95,9 @@
 					<select id="pairing-dropdown" name="dish-pairing" onchange = 'makeInfographic(this.value)'>
 						<option value = "default">--Select Varietal--</option>
 					</select>
-					<script src = "chartD.js"></script>
-					<script src = "infographic.js"></script>
-					<script src="chartB.js"></script>
+					<script src = "js/P3_G3_dropdown.js"></script>
+					<script src = "js/P3_G3_infographic.js"></script>
+					<script src="js/P3_G3_wine_list.js"></script>
 
 				</div>
 
@@ -250,7 +165,7 @@
 		<div class="border-box" id="winesBar">
 			<title>wine countries</title>
 			<div id="bar"></div>
-			<script src="bar.js"></script>
+			<script src="js/P3_G3_bar.js"></script>
 		</div>
 	</div>
 

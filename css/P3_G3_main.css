@@ -1,0 +1,91 @@
+    .jumbotron h1{
+        color: #fff;
+    }
+
+    .jumbotron p{
+        color: #fff;
+    }
+
+    .jumbotron{
+        width: 1150px;
+        background-color: #722f37;
+    }
+
+    .header-box {
+        background-color: #722f37;
+        padding: 20px;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+
+    .body {
+        background-color: #fef9e7;
+    }
+
+    .panel {
+        max-width: 400px;
+        margin: 0 auto;
+        margin-top: 30px;
+        background-color: #fef9e7;
+        color: #722f37;
+        border-color:#722f37;
+    }
+    .panel-heading{
+        background-color: #722f37;
+        border-color:#722f37;
+    }
+    .panel-title {
+        max-width: 400px;
+        margin: 0 auto;
+        color: #fef9e7;
+        background-color: #722f37;
+    }
+
+    .row {
+        display: flex;
+        padding: 0 15px;
+        justify-content: space-between;
+    }
+    .col-md-4#column1 {
+        max-width: 400px;
+        margin: auto;
+        padding-left: 50px;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .scroll {
+        background-color: #fffff8;
+        width: 400px;
+        height: 300px;
+        overflow-y: auto;
+        overflow-wrap: break-word;
+        text-align: left;
+        padding-left: 20px;
+        padding-top: 0px;
+        margin-top: 0;
+        border-color:#722f37;
+        border: 10px solid #722f37;
+    } 
+    .wines-list{
+        text-align: left;
+        padding-top: 0px;
+    }
+    .panel-body#wines-list{
+        text-align: left;
+        padding-top: 0px;
+        width: 400px;
+    }
+
+    .border-box#pieChart {
+        border: 10px solid #722f37;
+        width: 400px;
+    }
+
+    .text-center#winesBar {
+        margin: 20px;
+    }
+
+    .border-box#winesBar {
+        border: 10px solid #722f37;
+        justify-content: space-between;
+    }
