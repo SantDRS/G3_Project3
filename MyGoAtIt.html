@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Wine Selection Dashboard</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/P3_G3_main.css">
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		<script src="https://d3js.org/d3.v5.min.js"></script>
+		<!-- Leaflet CSS -->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+			integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+			crossorigin="" />
+
+		<!-- Leaflet JavaScript code -->
+		<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+			integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+			crossorigin=""></script>
+		
+		<!-- Our CSS -->
+  		<link rel="stylesheet" type="text/css" href="css/style.css">
+		
+	</head>
+
+	<body class = "body">
+
+		<div class = "header-box">
+			<div style="display:flex; justify-content:space-between;">
+				<div style="top: 25%; left: 0; transform: translateY(0%); z-index: 9999;">
+					<img src="https://i.gifer.com/DVJ3.gif" alt="Example GIF" width="300" height="300">
+				</div>
+				<div class="col-md-12 jumbotron text-center">
+					<h1>Wine Pairing Dashboard</h1>
+					<p>Use our dashboard to help choose a wine for tonights dinner!</p>
+				</div>
+				<div style="top: 25%; right: 0; transform: translateY(0%); z-index: 9999;">
+					<img src="https://i.gifer.com/DVJ3.gif" alt="Example GIF" width="300" height="300">
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<!-- Row for visualizations -->
+		<div class = "row">
+
+
+
+			<!-- First Column -->
+			<!-- Displays list of wines depending varietal chosen -->
+			<div class="col-md-4" id="column1">
+				<div class="text-left">
+					<h3>Wines Avaliable</h3>
+					<div class="scroll">
+						<ul id="wines-list" class = "panel-body"></ul>
+					</div>
+				</div>
+			</div>
+			
+
+
+			<!-- Second Column -->
+			<!-- Displays top 5 wines for chosen varietal-->
+			<div class="col-md-4" id="column2">
+
+				<!-- Add dropdown list to select dish pairings -->
+				<div class = "text-center">
+					<label for="dish-pairing">Select a dish pairing:</label>
+					<select id="dish-pairing" name="dish-pairing">
+						<option value="">--Select a dish pairing--</option>
+						<option value="beef">Beef</option>
+						<option value="chicken">Chicken</option>
+						<option value="crab">Crab</option>
+						<option value="cured meat">Cured Meat</option>
+						<option value="dessert">Dessert</option>
+						<option value="duck">Duck</option>
+						<option value="fish">Fish</option>
+						<option value="french fries">French Fries</option>
+						<option value="fruit">Fruit</option>
+						<option value="game">Game</option>
+						<option value="indian">Indian</option>
+						<option value="italian">Italian</option>
+						<option value="lamb">Lamb</option>	
+						<option value="lobster">Lobster</option>
+						<option value="mexican">Mexican</option>
+						<option value="pasta">Pasta</option>
+						<option value="pizza">Pizza</option>
+						<option value="plum">Plum</option>	
+						<option value="pork">Pork</option>
+						<option value="quail">Quail</option>
+						<option value="salmon">Salmon</option>
+						<option value="shellfish">Shellfish</option>
+						<option value="soft cheese">Soft Cheese</option>
+						<option value="spice">Spice</option>
+						<option value="sushi">Sushi</option>
+						<option value="tapas">Tapas</option>
+					</select>
+				</div>
+				
+				<!-- Add dropdown list to select dish pairings -->
+				<div class = "text-center">
+					<label for="pairing-dropdown">Select a wine varietal:</label>
+					<select id="pairing-dropdown" name="dish-pairing" onchange = 'makeInfographic(this.value)'>
+						<option value = "default">--Select Varietal--</option>
+					</select>
+					<script src = "js/P3_G3_dropdown.js"></script>
+					<script src = "js/P3_G3_infographic.js"></script>
+					<script src="js/P3_G3_wine_list.js"></script>
+
+				</div>
+
+				<div class="panel panel">
+					<div class="panel-heading">
+						<h3 class="panel-title">Top Rated Wines By Varietal</h3>
+					</div>
+					<div id="wineInfo" class="panel-body">
+						<table id ='wineTable'>
+							<tbody>
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- Third Column -->
+			<!-- Displays pie chart -->
+			<div class="col-md-4" id="column3">
+				<h3>Wine Types</h3>
+				<div class="border-box" id="pieChart">
+					<script>
+						window.onload = function() {
+						
+						CanvasJS.addColorSet("wineColors",
+						["#722f37", "#f9e8c0", "#f1ddcf", "#fad6a5", "#8e594a", "#f4c4bb"])
+						
+						var chart = new CanvasJS.Chart("chartContainer", {
+							animationEnabled: true,
+							colorSet: "wineColors",
+							backgroundColor: "#fffff8",
+
+							data: [{
+								type: "pie",
+								startAngle: 240,
+								yValueFormatString: "##0",
+								indexLabel: "{label} {y}",
+								dataPoints: [
+									{y: 210, label: "Red:"},
+									{y: 150, label: "White:"},
+									{y: 625, label: "Sparkling:"},
+									{y: 36, label: "Dessert:"},
+									{y: 1, label: "Port:"},
+									{y: 67, label: "Rose:"}
+								]
+							}]
+						});
+						chart.render(
+							
+						);
+						}
+						</script>
+						</head>
+						<body>
+						<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+						<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+				</div>
+			</div>
+		</div>
+
+	<div class="text-center" id="winesBar">
+		<h3>Wines Produced by Country</h3>
+		<div class="border-box" id="winesBar">
+			<title>wine countries</title>
+			<div id="bar"></div>
+			<script src="js/P3_G3_bar.js"></script>
+		</div>
+	</div>
+	
+	<div class="text-center" id="wineryMapText">
+		<h3>Winery Map</h3>
+		<div class="border-box" id="wineryMapBox">
+		
+			<!-- The div where we'll insert our map -->
+			<div id="map"></div>
+			<!-- JavaScript file -->
+			<script type="text/javascript" src="js/MyGoAtIT.js"></script>
+	
+		</div>
+	</div>
+	<div class = "row">
+		<div class="text-center">
+			<p>We hope you enjoyed our dashboard!</p>
+		</div>
+	</div>
+	</body>
+
+</html>
