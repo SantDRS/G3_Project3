@@ -456,11 +456,20 @@ let cities = [
 // An array that will store the created cityMarkers
 let cityMarkers = [];
 
+var wineIcon = L.icon({
+  iconUrl: 'wine-bottle-svgrepo-com.svg', 
+  iconSize:[32, 37],
+  iconAnchor: [16, 37],
+  popupSize: [32, 37],
+  popupAnchor: [0, -30]
+
+});
+
 for (let i = 0; i < cities.length; i++) {
   // loop through the cities array, create a new marker, and push it to the cityMarkers array
   cityMarkers.push(
-    L.marker([cities[i].lat, cities[i].lng]).bindPopup("<h1>" + cities[i].address + "</h1>")
-  );
+    L.marker([cities[i].lat, cities[i].lng],{icon: wineIcon}).bindPopup("<p>" + cities[i].address + "</p>")
+    );
 }
 
 // Add all the cityMarkers to a new layer group.
